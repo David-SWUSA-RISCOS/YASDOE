@@ -28,7 +28,7 @@ If it is a small and simple system why did it take ten years?
 
 YASDOE has had many parts written three or more time to improve the simplicity, make it smaller, and / or make it easier to use.  Writing an OS intended to be simple, small, fast, lightweight, easy to use, and responsive takes a lot of thought in how to implement things, especially when you are really serious about all these goals.  There may be component rewrites in the future to further improve the implementations, though the API / ABI is set in stone now.
 
-Now YASDOE is at a point that it works, and has a stable API and ABI, so it is ready to be released.
+Now YASDOE is at a point that it works, and has a stable API and ABI, so it is ready to be released.  I hope others enjoy YASDOE as it is updated.
 
 
 
