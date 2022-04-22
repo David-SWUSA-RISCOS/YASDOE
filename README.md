@@ -16,6 +16,10 @@ Stable and Reliable.  Well maybe not litterally, this is a prealpha state OS at 
 
 A project of dedication.  I have been dedicated to YASDOE for ten years now, and have every intention of pushing on as long as I am alive.  This has become more than just another fun project, it has become a true dedication to create and continue to improve a good usable modern OS that is actually simple enough to use, program for, and understand in full.  With the goals mentioned above, as well as that of keeping the codebase as small as reasonable while providing all the extra functionality, this is an OS that should progress to continue to do better every month for the rest of its existence.  Being a truly Open Source project, without any restrictions on the use of the codebase, YASDOE is meant to live in one form or another for a long time, so long as at least one person has some interest in this OS it will live on.
 
+The initial version is a cool hybrid of implementation.  The target being Single Board Computers based on the BCM2835 SoC, the physical CPU is an ARM1176, though the OS runs mostly on a 68030 compatible CPU.  This is accomplished through the use of a very effecient Emulation layer, that runs under the OS.  To aid in keeping the speed high, the 68030 style PMMU is emulated by translating the 68K page tables into ARM page tables.  It is still possible to run ARM native libraries and binaries, though these are not considered native format to the OS.
+
+As to ease the fact that some of the native HW drivers for YASDOE are still a bit lacking in some areas (the focus was more the OS than the drivers till now), the first release will be designed to run hosted on top of RISC OS.  This is accomplished by using device drivers that go through RISC OS instead of to bare HW.  This has been a method of developing the OS, and as such is the best tested and most stable at this time.  As the HW drivers become more stable they will be released, and eventually a stable enough to be usable version will be able to run without being hosted on another OS.
+
 # Ten Years?
 
 If it is a small and simple system why did it take ten years?
@@ -25,9 +29,5 @@ YASDOE has had many parts written three or more time to improve the simplicity, 
 Now YASDOE is at a point that it works, and has a stable API and ABI, so it is ready to be released.
 
 
-
-The initial version is a cool hybrid of implementation.  The target being Single Board Computers based on the BCM2835 SoC, the physical CPU is an ARM1176, though the OS runs mostly on a 68030 compatible CPU.  This is accomplished through the use of a very effecient Emulation layer, that runs under the OS.  To aid in keeping the speed high, the 68030 style PMMU is emulated by translating the 68K page tables into ARM page tables.  It is still possible to run ARM native libraries and binaries, though these are not considered native format to the OS.
-
-As to ease the fact that some of the native HW drivers for YASDOE are still a bit lacking in some areas (the focus was more the OS than the drivers till now), the first release will be designed to run hosted on top of RISC OS.  This is accomplished by using device drivers that go through RISC OS instead of to bare HW.  This has been a method of developing the OS, and as such is the best tested and most stable at this time.  As the HW drivers become more stable they will be released, and eventually a stable enough to be usable version will be able to run without being hosted on another OS.
 
 FOOTNOTE: I need a spell checker badly.
