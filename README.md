@@ -1,3 +1,5 @@
+![alt text](https://github.com/David-SWUSA-RISCOS/YASDOE/raw/main/docs/gifs/logo.gif "YASDOE Logo")
+
 # YASDOE
 
 YASDOE (Yet Another Simple Desktop Operating Environment) a Simple ARM and 680x0 Operating System.
