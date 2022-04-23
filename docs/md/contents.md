@@ -9,7 +9,7 @@ This will be the primary slow down in the rate at which code is added to this re
 The contents (Note listed items will become links as actual files added to documentation):
 note: the contents is far from complete.  I had to recreate this page from scratch.
 
-* [The Direct Inspiration of YASDOE.](https://github.com/David-SWUSA-RISCOS/YASDOE/raw/main/docs/inspire.md)
+* [The Direct Inspiration of YASDOE.](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/inspire.md)
 
 ## User Documentation:
 
