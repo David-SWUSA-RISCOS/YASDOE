@@ -6,7 +6,7 @@ Direct Inspiration for YASDOE comes from a number of other Operating Systems tha
 * **Amiga OS** : To many things are demonstrated by Amiga OS and helped in the creation of YASDOE.  See the Amiga OS section below.
 * **Atari TOS** : Simplicity put to good use, proving complexity is not required.
 * **Atari MiNT** : Demonstrates how simply a good Kernel and OS can be written, and what to avoid to keep speed.
-* **RISC OS** : Some of the concepts on easy means of redirection of verious system functions, calls, services, etc inspired YASDOE.
+* **RISC OS** : Some of the concepts on easy means of redirection of verious system functions, as well as Drag and Drop.
 * **The X Windowing System** : Shows Some lessons about how to do things.
 * **BeOS** : Some of the GUI concepts came of use in the design of YASDOE.
 * **X-GUI** : Showed some light on simple methods to do some things in a GUI.
@@ -56,6 +56,8 @@ From RISC OS we get the inspiration for the optional Application Directories.  I
 Also from RISC OS come some of the tricks of WindowManagement that make life just a little easier.
 
 Then there is the support for dragging a files icon to a directory display window to specify where to save said file.  This also works for transfering files between applications, very much like it does in RISC OS.  It has been found that this is an easier way for a lot of users to realize where the file is really found in the mass storage device file system (as using standard file requesters often users do not note where they save things).
+
+Also the way that RISC OS is specific about being able to revector many calls has been an inspiration to the universal vectorization abilities of YASDOE.
 
 ---
 ## X Windowing System:

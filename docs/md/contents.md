@@ -7,6 +7,7 @@ The documentation will at all times be ahead of the source and any binary releas
 This will be the primary slow down in the rate at which code is added to this repo.  This is do to the fact that I wrote a large amount of documentation, and messed up most of it do to not testing viewability, so am having to redo a large portion of the documentation.  As I verify that each document is good it will be added to the repo.
 
 The contents (Note listed items will become links as actual files added to documentation):
+
 note: the contents is far from complete.  I had to recreate this page from scratch.
 
 * [The Direct Inspiration of YASDOE.](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/inspire.md)
@@ -42,15 +43,16 @@ note: the contents is far from complete.  I had to recreate this page from scrat
 * Writing Libraries.
 
 ## Driver Developer Documentation:
-N _the application developer documentation is a prerequesit of this section_
+_the application developer documentation is a prerequesit of this section_
 
 * Writing Device Drivers, the basics.
 * When you need inturrupts.
 * More advanced Driver Development.
 
 ## Detailed OS Documentation:
-n _each of the following leads to a topic specific contents, as each is a very large multi-page document_
-t _this section is the least complete_
+_each of the following leads to a topic specific contents, as each is a very large multi-page document_
+
+_this section is the least complete_
 
 * The Structure of YASDOE in detail.  Not as you may expect, better, simpler.
 * The Kernel (SYS.LIBRARY), Very little to do a lot.
