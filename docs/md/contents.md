@@ -54,6 +54,9 @@ _each of the following leads to a topic specific contents, as each is a very lar
 
 _this section is the least complete_
 
+* [ARM Hosted 680x0 Emulation Layer](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/68kemu/arm68kemu.md)
+* [The 680x0 Emulation RO Hosted Version).](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/68kemu/emurohost.md)
+* The 680x0 Emulation Layer for ARM Host Systems (Native boot verison).
 * The Structure of YASDOE in detail.  Not as you may expect, better, simpler.
 * The Kernel (SYS.LIBRARY), Very little to do a lot.
 * The DOS.LIBRARY (Device Operating Systems, also handles File Systems).
