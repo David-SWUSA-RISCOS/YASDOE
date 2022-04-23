@@ -1,18 +1,18 @@
 # YASDOE Inspiration.
 
-Direct Inspiration for YASDOE comes from:
+Direct Inspiration for YASDOE comes from a number of other Operating Systems that I am familiar with:
 
 
-**Amiga OS** : To many things are demonstrated by Amiga OS and helped in the creation of YASDOE.  See the Amiga OS section below.
-**Atari TOS** : Simplicity put to good use, proving complexity is not required.
-**Atari MiNT** : Demonstrates how simply a good Kernel and OS can be written, and what to avoid to keep speed.
-**RISC OS** : Some of the concepts on easy means of redirection of verious system functions, calls, services, etc inspired YASDOE.
-**The X Windowing System** : Shows Some lessons about how to do things.
-**BeOS** : Some of the GUI concepts came of use in the design of YASDOE.
-**X-GUI** : Showed some light on simple methods to do some things in a GUI.
-**Ancient Unix** : Provided a base concept of how to ease the applications while improving the overall system.
-**Zerro-GUI** : As I wrote this in 1993 through 1995, it inspired me through the experience gained in its creation.
-**ProDOS** : From this we get the concept of using "/" as the root of the forest, and having each volume and file device be the first level under that.
+* **Amiga OS** : To many things are demonstrated by Amiga OS and helped in the creation of YASDOE.  See the Amiga OS section below.
+* **Atari TOS** : Simplicity put to good use, proving complexity is not required.
+* **Atari MiNT** : Demonstrates how simply a good Kernel and OS can be written, and what to avoid to keep speed.
+* **RISC OS** : Some of the concepts on easy means of redirection of verious system functions, calls, services, etc inspired YASDOE.
+* **The X Windowing System** : Shows Some lessons about how to do things.
+* **BeOS** : Some of the GUI concepts came of use in the design of YASDOE.
+* **X-GUI** : Showed some light on simple methods to do some things in a GUI.
+* **Ancient Unix** : Provided a base concept of how to ease the applications while improving the overall system.
+* **Zerro-GUI** : As I wrote this in 1993 through 1995, it inspired me through the experience gained in its creation.
+* **ProDOS** : From this we get the concept of using "/" as the root of the forest, and having each volume and file device be the first level under that.
 
 There are other influences as well, though these are the major ones.  The breif descriptions in this list are just to show major the points, below are sections for each of these and how they effected the creation and design of YASDOE.
 
