@@ -86,6 +86,8 @@ The Unix Philosophy in its pure form has guided a lot of the creation of YASDOE.
 
 Zerro-GUI was a series of toy GUIs I wrote in the early 1990s to learn the concepts of implementing a complete Windowing System.  There were a few versions from the view of how Window Management was handled, so I could learn as much as possible.  This project is what taught me the core concepts of most forms of Window Managemet (including 'Compositing Window Management' even though we did not yet use that term).
 
+As these systems were my first Window Managers of any kind (I was stil quite young), they have had an influence on most things I have created.
+
 ---
 ## ProDOS:
 

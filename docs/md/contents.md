@@ -8,7 +8,7 @@ This will be the primary slow down in the rate at which code is added to this re
 
 The contents (Note listed items will become links as actual files added to documentation):
 
-note: the contents is far from complete.  I had to recreate this page from scratch.
+note: the contents is far from complete.  I had to recreate this page from scratch.  I will be improving it as I add documentation.
 
 * [The Direct Inspiration of YASDOE.](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/inspire.md)
 
