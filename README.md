@@ -6,6 +6,8 @@ YASDOE (Yet Another Simple Desktop Operating Environment) a Simple  680x0 Operat
 
 For docs see: [Documentation Contents](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/contents.md)
 
+For news on YASDOE see: [YASDOE News:](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/news.md)
+
 Imagine an Operating Environment designed from the ground up to be small, fast, responsive, and radically simple.  Not just simple in its function, also simple to program for and to use.  This is the design goal of YASDOE, which to date has been a single person project over the last 10 years, starting in June of 2012 and finally being released to the world starting in May of 2022 (with some things ahead of this).
 
 Designed to be easy to use.  YASDOE is modeled after some well known User Interfaces, taking to mind what people report liking about using each one.  Help is easy to obtain without looking awayfrom what you are doing.  Everything within the OS is well documented on how to do what you wish to do.  A good amount of effort has went into testing with people that are poor at using computers to help improve the user experience for any level of user.  The Windowing System is designed to be very responsive and intuitive, the CLI is intended to be easy to use with extreme power.
