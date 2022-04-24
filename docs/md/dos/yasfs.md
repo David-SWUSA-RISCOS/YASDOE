@@ -6,7 +6,7 @@ YASFS is a simple extents based Filesystem that supports up to 2 data streams (f
 
 The root block of YASFS gives the locations of the free-space map, the root directory, and the information on the logical volume.  It also contains the offset on the physical media to either the rootblock of the next YASFS volume on the same volume, or a forign partition type, or 0 for this being the last partition.
 
-The root block may be anywhere in the first 8192 physical sectors of the storage device.  The structure of the root block is:
+The root block may be anywhere in the first 8192 physical sectors of the volume.  The structure of the root block is:
 ```c
 typedef struct {
   UINT32 Magic;    /* Magic number, should be the ASCII string "YASF". */
@@ -15,9 +15,10 @@ typedef struct {
   UINT32 lvsize;   /* Low 32-bits of volume size in clusters. */
   UINT16 hvsize;   /* High 16-bits of volume size in clusters. */
   UINT16 clsz;     /* Size in bytes of allocation cluster. */
-  UINT32 bitmap;   /* Cluster where free-space bitmap begins. */
+  UINT32 freemap;  /* Cluster where free-space map begins. */
   UINT32 rootdir;  /* Cluster where the rootdirectory starts. */
-  UINT32 padd[117]; /* Padding to make block 4096 bytes long. */
+  UINT32 padd[1004]; /* Padding to make block 4096 bytes long. */
+  char   name[32]; /* Volume name. */
   UINT64 nxtyas;  /* Offset from here to next YASFS volume rootblock. */
   UINT64 prvyas;  /* Offset from here to last YASFS volume rootblock. */
 }YASFSROOT;
