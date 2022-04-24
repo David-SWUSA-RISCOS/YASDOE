@@ -102,7 +102,7 @@ From ProDOS we get the directory format.  Instead of using a single tree like Un
 ---
 ## PlayerKit:
 
-PlayerKit was an early example of a software Sprite Engine for 8-bit personal computers (specifically the Apple II).  For sprite masking it used line cliping, using inversion point offsets to define an area that could be non-continouse.  This was very convient for sprites, though even more useful in windowing systems later.
+PlayerKit was an early example of a software Sprite Engine for 8-bit personal computers (specifically the Apple II).  For sprite masking it used line cliping, using inversion point offsets to define an area that could be non-continuous.  This was very convient for sprites, though even more useful in windowing systems later.
 
 
 ---
