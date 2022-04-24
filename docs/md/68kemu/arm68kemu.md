@@ -14,7 +14,27 @@ The exact details of the call made to continue translation depend on the Host de
 
 When data is fetched or stored by instructions, if running in Big Endian it is directly fetched, if running in little endian on an ARMv6 or newer it will preform the correct byteswap for the size of data being fetched inserting an REV or similar.  If running on an ARMv4 or earlier (sorry ARMv5 not supported) it will perfom the byteswap by the two or four instruction byteswap instructions that are well known (2 instructions for 16-bit byteswap and 4 for 32-bit byteswap).  The additional code needed to load or store data when running on the older CPUs is the reason for the extreme slowdown (about 8 times slower than the host in worse case).
 
-For each data transfer the address used is from the 680x0 address space.  Thus relitive address are adjusted correctly, and absolute addresses are relitive to 680x0BASE.  When the Emulator is running the ARM side register R11 always contains 680x0BASE.  680x0BASE refers to address 0 as seen from the 680x0 code.  The translated code running in the ARM side buffer is outside the 680x0 address space.
+For each data transfer the address used is from the 680x0 address space.  Thus relitive address are adjusted correctly, and absolute addresses are relitive to BASE680x0.  When the Emulator is running the ARM side register R11 always contains BASE680x0.  BASE680x0 refers to address 0 as seen from the 680x0 code.  The translated code running in the ARM side buffer is outside the 680x0 address space.
+
+## Register Assignments:
+
+680x0 Registers are mostly assigned directly to ARM registers, though not all.  The focus is on the most used of the 680x0 registers, thus normally we have:
+ 
+* R0-R4 = D0-D4
+* R5-R9 = A0-A4
+* R13   = A7
+* R11-R12 = Emulator temp usage registers.
+* R10   = pointer to CPUBlock structure.
+
+This covers the most common usage cases, as 680x0 code uses mostly D0-D4 and A0-A3.  The remaining registers are in the CPUBlock Structure in RAM (which should be in the L1 cache do to use).
+
+## Things Requiring Special Consideration:
+
+There are a few things that require special consideration, do to the nature of the differences between the 680x0 and the ARM CPU's.  Among these are the handling of the stack, for which we must generate a little extra code for every access of A7 on the 680x0 (R13 on the ARM).
+
+A7 is the stack pointer on the 680x0 for most applications.  Thus A7 is assigned to the R13 stack, though there are times that the R13 stack must be ARM word alligned.  Most 680x0 applications keep the stack 16-bit alligned, we need 32-bit alligned for many things.  Thus when operating on the stack we insert code to keep the stack 32-bit alligned, and it is a good idea to figure that the code uses as much as 2 times as much stack space as the 680x0 equilivent.  Like the ARM the choice of registers for the stack is just a convention commonly used on the 680x0 CPUs, any Address register could be used as the stack.
+
+As for the PC (R15 on ARM, implicit on 680x0) is not an issue, as the method code is translated keeps its allignment correct.
 
 ## TODO:
 

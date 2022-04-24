@@ -25,6 +25,7 @@ note: the contents is far from complete.  I had to recreate this page from scrat
 * Adding devices, libraries and other extensions.
 * The startup sequence, and power user configuration.
 * Getting Started With YASBasic, a powerful little programming language.
+* [The YASFS FileSystem.](https://github.com/David-SWUSA-RISCOS/YASDOE/blob/main/docs/md/dos/yasfs.md)
 
 ## Applicaiton Developer Documentation:
 
