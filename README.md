@@ -30,6 +30,30 @@ There are plans for versions to run on PowerPC CPUs as well, in most cases hoste
 
 As to ease the fact that some of the native HW drivers for YASDOE are still a bit lacking in some areas (the focus was more the OS than the drivers till now), the first release will be designed to run hosted on top of RISC OS.  This is accomplished by using device drivers that go through RISC OS instead of to bare HW.  This has been a method of developing the OS, and as such is the best tested and most stable at this time.  As the HW drivers become more stable they will be released, and eventually a stable enough to be usable version will be able to run without being hosted on another OS.
 
+# Changes Ever Time:
+
+When I started the project that became YASDOE I began with the idea of something to run 68K software on the RPi SBC.  The original thought was just to provide a 68K emulation layer to port existing 68K OS's to, then it evolved with other thoughts.  At its core the system is still based around the 68K emulation layer (which evolved a lot from whence it began).
+
+When things began to evolve into more of an OS of its own, I started heading towards an Atari TOS clone with some nice features.  Unfortunately to clone TOS would have put unwanted limits on the desired ability of an OS for me to code, so I abandoned full TOS compatibility, and took the code I had and moved in a different direction.
+
+The next step was to take the inspiration of direct call shared libraries from AmigaOS and evolve the concept to something that is simple for use in a fully protected memory environment.  This is the library convention still used within YASDOE to this day.
+
+Remembering the late 1980s through the mid 1990s and the good Macintosh System Software, I began playing with a system to be able to run 680x0 Macintosh software.  The goal being not to have some of the negitives of the original while still running programs written for the Macintosh 680x0 computers.  This brought about what has become the other OS project of GraFaDOE (Graphics Fast Desktop Operating Environment).  Also I learned a lot about what Apple calls QuickDraw, I call FastGraph in the clone (Apple still holds the QuickDraw name).  From this I improved the clipping algorithms used in YASDOE, as the result of first implementing them in GraFaDOE.  The GraFaDOE project has just been a sideline that has had positive effectives on the design of YASDOE.
+
+From there everything started to come togather.  It did not take long before the 680x0 emulator supported full PMMU emulation, by taking advantage of the Host OS (or ARM HW) ability to remap pages and set per page protection on the pages, thus keeping it fast.
+
+Then the speed of the emulation got improved when I finally figured out a good means of lazy translation for the JIT Emulator.  This made more of an improvement in speed than any other single improvement to the Emulation layer.
+
+After a while I figured how to run big-endian on both ARMv6 baremetal and RISC OS.  This made a notable additional improvement to the speed of the code.  Though as ARM is not going to continue with support for big-endian from what they say, I have dropped back to focusing on the little endian host version (while still keeping up the big endian versions for those that can use them).
+
+Then it was just a matter of writing everything, learning as I go.  Often it was best to rewrite components to improve the speed and/or simplicity of the component.  This meant the final API / ABI took a while to reach, though it is here and I am finally able to share this long running and fun project.
+
+Once everything is up on github for both OS projects (YASDOE first, followed by GraFaDOE), I will be looking to see which is most used, so I know where to focus the most.  Both projects will continue here as long as I am around.  I will also look into the possibility of adding a PowerPC JIT emulation layer.
+
+The license is chosen so that others can use the codebase, as well as to help ensure that YASDOE lasts long after I leave this world (which is hopefully a very long time in the future (at least anothe 100 years would be nice)).
+
+For those interested in GraFaDOE, it may be a bit of time to get YASDOE up, and I will be waiting to create the GraFaDOE Repo until after YASDOE is up and fully usable in the form in this repo.  That said I will likely post a document section in this Repo about some of the stuff on GraFaDOE, after all it did help with YASDOE.
+
 # Where we Came From:
 
 From the mid 1980s (1986) I have been an Amiga, and Atari ST/TT series user.  From the lat 1980s I have been a RISC OS user.  I continue to use RISC OS and Amiga OS to this day, though I admit my love for RISC OS is less than it used to be.  Amiga OS has always had a close place in my life, and likely always will.  As an Amiga user I am one of the purest that prefers the hunk format and non-linking (at runtime) shared libraries, this is a well known devide (the other side being the elf supporters) in the Amiga World.
