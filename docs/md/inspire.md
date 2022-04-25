@@ -3,16 +3,16 @@
 Direct Inspiration for YASDOE comes from a number of other Operating Systems that I am familiar with:
 
 
-* **Amiga OS** : To many things are demonstrated by Amiga OS and helped in the creation of YASDOE.  See the Amiga OS section below.
+* [**Amiga OS**](https://classicwb.abime.net/) : To many things are demonstrated by Amiga OS and helped in the creation of YASDOE.  See the Amiga OS section below.
 * **Atari TOS** : Simplicity put to good use, proving complexity is not required.
-* **Atari MiNT** : Demonstrates how simply a good Kernel and OS can be written, and what to avoid to keep speed.
-* **RISC OS** : Some of the concepts on easy means of redirection of verious system functions, as well as Drag and Drop.
-* **The X Windowing System** : Shows Some lessons about how to do things.
-* **BeOS** : Some of the GUI concepts came of use in the design of YASDOE.
+* [**Atari MiNT**](https://freemint.github.io/) : Demonstrates how simply a good Kernel and OS can be written, and what to avoid to keep speed.
+* [**RISC OS**](https://www.riscosopen.org/content/) : Some of the concepts on easy means of redirection of verious system functions, as well as Drag and Drop.
+* [**The X Windowing System**](https://x.org/wiki/) : Shows Some lessons about how to do things.
+* [**BeOS**](https://www.haiku-os.org/) : Some of the GUI concepts came of use in the design of YASDOE.
 * **X-GUI** : Showed some light on simple methods to do some things in a GUI.
-* **Ancient Unix** : Provided a base concept of how to ease the applications while improving the overall system.
+* [**Ancient Unix**](https://minnie.tuhs.org/UnixTree/) : Provided a base concept of how to ease the applications while improving the overall system.
 * **Zerro-GUI** : As I wrote this in 1993 through 1995, it inspired me through the experience gained in its creation.
-* **ProDOS** : From this we get the concept of using "/" as the root of the forest, and having each volume and file device be the first level under that.
+* [**ProDOS**](https://prodos8.com/) : From this we get the concept of using "/" as the root of the forest, and having each volume and file device be the first level under that.
 * **PlayerKit** : From this old (1979) program comes the inspiration of line wise clipping, and non-continous clipping areas.
 * [**Macintosh System Software**](https://main.system7today.com/) : From this we get the concept of compressing line wise clipping to save space.  Also an alternative means of storing the **.info** data (do not need a seperate file, can use a secondary data stream on the file).
 
