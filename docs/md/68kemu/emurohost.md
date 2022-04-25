@@ -11,7 +11,7 @@ The call for continuing translation on RISC OS hosted Systems is:  **SWI EMU68K_
 
 When **SWI EMU68K_ContTrans** is called it uses the return address to determine the location in the address table, then uses the 68K address to continue from as stored in the translation address table.
 
-For translating page tables we just use calls to map the page tables in RISC OS, very simple indeed.
+For translating page tables we just use calls to map the page tables in RISC OS, very simple indeed.  It should be noted that it is extremebly important that we are not allowing any form of RISC OS side multitasking, as we are rearanging page tables and this could cause a crash if we allow RISC OS to try to swap tasks.
 
 If needed (such as for drivers) OS calls can be made using OS_CallASWI, which is mapped to TRAP #7 on the 680x0 side.  When calling a RISC OS SWI from the emulated code registers D0 through D7 map to ARM Registers R0 through R7, and registers A0 and A1 map to ARM registers R8 and R9.  The SWI number to call should be placed in A3 (which gets copied for the call).  This allows the 680x0 drivers to make use of RISC OS system calls, and is only allowed for code that is mapped in the address range 0x00F00000 through 0x00FFFFFF in the 680x0 address space (the top MB of the low 24bits of the address space).  Addresses are translated automatically for SWI calls the emulator knows about (which are only the ones needed by the current drivers).
 

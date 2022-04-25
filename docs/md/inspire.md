@@ -14,7 +14,7 @@ Direct Inspiration for YASDOE comes from a number of other Operating Systems tha
 * **Zerro-GUI** : As I wrote this in 1993 through 1995, it inspired me through the experience gained in its creation.
 * **ProDOS** : From this we get the concept of using "/" as the root of the forest, and having each volume and file device be the first level under that.
 * **PlayerKit** : From this old (1979) program comes the inspiration of line wise clipping, and non-continous clipping areas.
-* **Macintosh System Software** : From this we get the concept of compressing line wise clipping to save space.  Also an alternative means of storing the **.info** data (do not need a seperate file, can use a secondary data stream on the file).
+* [**Macintosh System Software**](https://main.system7today.com/) : From this we get the concept of compressing line wise clipping to save space.  Also an alternative means of storing the **.info** data (do not need a seperate file, can use a secondary data stream on the file).
 
 There are other influences as well, though these are the major ones.  The breif descriptions in this list are just to show major the points, below are sections for each of these and how they effected the creation and design of YASDOE.
 
