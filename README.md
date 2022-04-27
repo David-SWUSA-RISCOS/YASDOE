@@ -30,7 +30,7 @@ There are plans for versions to run on PowerPC CPUs as well, in most cases hoste
 
 As to ease the fact that some of the native HW drivers for YASDOE are still a bit lacking in some areas (the focus was more the OS than the drivers till now), the first release will be designed to run hosted on top of RISC OS.  This is accomplished by using device drivers that go through RISC OS instead of to bare HW.  This has been a method of developing the OS, and as such is the best tested and most stable at this time.  As the HW drivers become more stable they will be released, and eventually a stable enough to be usable version will be able to run without being hosted on another OS.
 
-# Changes Ever Time:
+# Changes Over Time:
 
 When I started the project that became YASDOE I began with the idea of something to run 68K software on the RPi SBC.  The original thought was just to provide a 68K emulation layer to port existing 68K OS's to, then it evolved with other thoughts.  At its core the system is still based around the 68K emulation layer (which evolved a lot from whence it began).
 
