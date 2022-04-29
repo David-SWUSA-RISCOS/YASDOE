@@ -1,5 +1,9 @@
 # YASDOE NEWS:
 
+## April 29th:
+
+Slowly plodding along in preperation to get some code up.  Also found a neglected project that may merit some interest in the distant future
+
 ## April 24th:
 
 I can see the point that enough documentation is up to start posting sources to the YASDOE Repository.  The begining for everyone else is in sight at last.
