@@ -12,3 +12,5 @@ Imagine an Operating Environment designed from the ground up to be small, fast, 
 
 For further information see the YASDOE Wiki HOME:
 [YASDOE Home](https://github.com/David-SWUSA-RISCOS/YASDOE/wiki)
+
+Note:  Until enough is up to have a working system, I have decided to use the Web Interface to update the github repo.  This is do to adding one file at a time at the rate of documentation.  Once the system is completely up on github I will change directions and use the command line tools, mostly from my RISC OS setup.  The nature of the documentation is attempting to become more generic, as it is a goal to have good support for what is released.
