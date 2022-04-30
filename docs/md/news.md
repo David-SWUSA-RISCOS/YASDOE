@@ -2,6 +2,12 @@
 
 ## April 29th:
 
+Bad-ish News: There does not apear to be much interest in YASDOE yet, and code will start going up soon (still targeting May 2nd).
+
+Goodish news.  The core emulation layer is nearly ready to have its repo created, and then it should be fairly quick to get every version uploaded.
+
+## April 29th:
+
 Slowly plodding along in preperation to get some code up.  Also found a neglected project that may merit some interest in the distant future
 
 ## April 24th:
