@@ -1,16 +1,30 @@
 # YASDOE NEWS:
 
-## April 29th:
+## May 5th 2022 :
+
+Never let a programmer set a date, we are always over optimistic of how fast we can get things done.  The documentation is coming slower than planned, and what order to get things going is an open question.
+
+I am working on the documentation both for the Wiki and for the YASDOE Help (YASGuide format) files at a good rate.  Do to the change mentioned below in this posting, I had to redo some of the documentation that I had already completed.  I am focussed on getting the documentation up to the point of making the OS usable.  As there is already very good documention on the API / ABI (part of the reason for the change) from many sources I am focused on the user documentation, along with a description of what works, what is a work in progress and what is missing in the YASDOE toolbox.  To avoid potential issues with names the graphics toolset is refered to in the documentation as FastGraph (had considered FastDraw), so if using existing tools know that the name of the toolset should be translated to that of the Apple original version.
+
+I have also made a decision on a detail that changes what some may be expecting, instead of having YASDOE and GraFaDOE I am instead releasing what would have been GraFaDOE as YASDOE, and then after release translating the feature set of the extras that are in the branch that had been described as YASDOE before today into the YASDOE in this new form.  This decision was made as this gives us an OS that already has a lot of third party software available.  The API and ABI is compatible with a subset of System Software 7.1 as was released on Macintosh 68K Computers in the early 1990s.  There is some ground work to support 65816 GS/OS applications as well, though this is not usable yet.
+
+These changes should reduce the remaining time needed to get the documentation done, as there is less to document with the ability to fallback on existing documentation.  I will not attempt to give a time estimate this time (see the first line of this posting).
+
+Do to the change YASDOE will not run on RISC OS hosted, or any other OS hosted.  YASDOE only runs self-booting and for the time being only on the BCM2835 based Raspberry Pi Single Board Computers (the model 1B, 1B+, Zero, and ZeroW).  The USB Support is a bit limited at this time, and does not yet include support for the USB Ethernet controler on these computers (this should be taken care of soon enough).  The USB driver is provided as an Init file that must be loaded from the boot partition on an SD-Card in order to access USB devices, you will also need the Inits for USB_HID (to access Keyboard and Mouse) and USB_Storage (to access USB Thumb Drives and the like).
+
+The YASDOE WiKi and other docs online are out of date and incorrect at this time, they are all before the change to the more useful branch.
+
+## April 29th 2022 :
 
 Bad-ish News: There does not apear to be much interest in YASDOE yet, and code will start going up soon (still targeting May 2nd).
 
 Goodish news.  The core emulation layer is nearly ready to have its repo created, and then it should be fairly quick to get every version uploaded.
 
-## April 29th:
+## April 29th 2022 :
 
 Slowly plodding along in preperation to get some code up.  Also found a neglected project that may merit some interest in the distant future
 
-## April 24th:
+## April 24th 2022 :
 
 I can see the point that enough documentation is up to start posting sources to the YASDOE Repository.  The begining for everyone else is in sight at last.
 
@@ -20,7 +34,7 @@ As I got thinking about the side project a little yesterday, I will note that Gr
 
 The goal is to get the stuff that can be used by other OS's documented and released first, as that will be the most immediate benifit.  Once that is done it should be quicker to get the rest of YASDOE into the repo.  Again remember the main bottleneck is getting the documentation ahead of anything released.
 
-## April 23RD:
+## April 23RD 2022:
 
 Considering a change in one element of the design of YASDOE.  Currently it relies on the abiltiy to use the PMMU to protect memory, this limits the hosts or the speed (either have to use a host that lets us play with the page mapping, or have to go pure software emulation on the 680x0).  As such, knowing it would only mean modifying a total of 14 lines of code (can remove the other stuff that becomes dead code later), I am considering making YASDOE use a flat, unprotected, memory model before it is released.
 
