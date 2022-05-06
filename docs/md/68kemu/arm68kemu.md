@@ -12,9 +12,7 @@ For more information on the specifics of how PMMU instructions are handled, plea
 
 The translation takes place by first fetching the first 16-bits of the next instruction (first word in 680x0 terms), then it decodes the opcode, fetching any needed additional words in the process.  Once decode it dumps the ARM code generated to the correct part of the ARM side code buffer, and repeats until it reaches a branch that goes outside the translated area.  The ending branch is replaced with a call to the translator so translation can continue.  The translator keeps a table of ARM and 680x0 code addresses for each stop point and each branch target, using said table to figure out where to translate to and from.
 
-The exact details of the call made to continue translation depend on the Host details (RISC OS, BareMetal, or other).  So please return to the documentation contents to find those details for your system.
-
-When data is fetched or stored by instructions, if running in Big Endian it is directly fetched, if running in little endian on an ARMv6 or newer it will preform the correct byteswap for the size of data being fetched inserting an REV or similar.  If running on an ARMv4 or earlier (sorry ARMv5 not supported) it will perfom the byteswap by the two or four instruction byteswap instructions that are well known (2 instructions for 16-bit byteswap and 4 for 32-bit byteswap).  The additional code needed to load or store data when running on the older CPUs is the reason for the extreme slowdown (about 8 times slower than the host in worse case).
+When data is fetched or stored by instructions, if running in Big Endian it is directly fetched, if running in little endian on an ARMv6 or newer it will preform the correct byteswap for the size of data being fetched inserting an REV or similar.  If running on an ARMv4 or earlier (sorry ARMv5 not supported) it will perfom the byteswap by the two or four instruction byteswap sequence that are well known (2 instructions for 16-bit byteswap and 4 for 32-bit byteswap).  The additional code needed to load or store data when running on the older CPUs is the reason for the extreme slowdown (about 8 times slower than the host in worse case).
 
 For each data transfer the address used is from the 680x0 address space.  Thus relitive address are adjusted correctly, and absolute addresses are relitive to BASE680x0.  When the Emulator is running the ARM side register R11 always contains BASE680x0.  BASE680x0 refers to address 0 as seen from the 680x0 code.  The translated code running in the ARM side buffer is outside the 680x0 address space.
 
@@ -38,6 +36,18 @@ A7 is the stack pointer on the 680x0 for most applications.  Thus A7 is assigned
 
 As for the PC (R15 on ARM, implicit on 680x0) is not an issue, as the method code is translated keeps its allignment correct.
 
+## NOTE ON SOURCES:
+
+There exists 4 versions of the source for the JIT emulator:
+* **1** : In Pascal targetting big endian Data ARM.
+* **2** : In Pascal targgeting little endian Data ARM.
+* **3** : In ARM Assembly targetting Big Endian Data ARM.
+* **4** : In ARM Assembly targetting Little Endian Data ARM.
+
+I mention this as there appear to be those people that would like to see HLL implementations despite the fact that the nature of a JIT Recompiling CPU emulator is much better suited to Assembly Language.   The Pascal Compiler used will also be put out as a seperate project.  At this time this emulation core is the only component that is available in Pascal and runs in ARM code, this will likely change with time.
+
 ## TODO:
 
 Need to add some pseudo code to help illistrate the function.  Need to add some actuall code to further illistrate the function.
+
+Need to write a PowerPC CPU emulation along with the TOC based call interfaced used by PowerPC PEF applications.
