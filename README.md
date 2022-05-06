@@ -15,4 +15,10 @@ Imagine an Operating Environment designed from the ground up to be small, fast, 
 For further information see the YASDOE Wiki HOME:
 [YASDOE Home](https://github.com/David-SWUSA-RISCOS/YASDOE/wiki)
 
-Note:  Until enough is up to have a fully documented OS, I have decided to use the Web Interface to update the github repo.  And I will continue to use the web interface as the github repo is by need documentation only (do to the lack of support for Resource Forks).   I am looking for a means to host the source and binaries of YASDOE as archive files, as not being able to view the source is antithis to the nature of github (and some source files have a resource fork (ok a lot of source files have a resource fork).
+Note:  Until enough is up to have a fully documented OS, I have decided to use the Web Interface to update the github repo.  And I will continue to use the web interface as the github repo is by need documentation primarily.
+
+This Repo will end up having archives of the source code, that can not be extracted to the github, as much of the source has resource forks.
+
+## YFS NOTE:
+
+YFS (the native FileSystem for Yasdoe) is much more capable than HFS+ in some ways, though much more limited in one way.  While you can have billions of files on huge drives, you can only have 65536 different types of file.  This is a known limit of YFS that does not have an easy solution without breaking the FS for programs that rely on its current structure (such as the system software of YASDOE).
