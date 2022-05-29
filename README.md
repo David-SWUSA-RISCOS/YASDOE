@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/David-SWUSA-RISCOS/YASDOE/raw/main/docs/gifs/logo.gif "YASDOE Logo")
 
-YASDOE (Yet Another Simple Desktop Operating Environment) a Simple  680x0 Operating System, in three versions.
+YASDOE (Yet Another Simple Desktop Operating Environment) a Simple  680x0 Operating System.
 
 There is some consideration being given to a future PowerPC layer, though this is unlikely to be seen in the near future.
 
