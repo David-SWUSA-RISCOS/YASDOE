@@ -2,6 +2,8 @@
 
 ![alt text](https://github.com/David-SWUSA-RISCOS/YASDOE/raw/main/docs/gifs/logo.gif "YASDOE Logo")
 
+PLEASE SEE: [The YASDOE WIKI](https://github.com/David-SWUSA-RISCOS/YASDOE/wiki) For more information
+
 YASDOE (Yet Another Simple Desktop Operating Environment) a Simple  680x0 Operating System.
 
 YASDOE has changed directions radically, thankfully before any code was posted.  There will be continuing updates, though in the future only for 680x0 and 65816 based computers.  The choice to target 680x0 and 65816 based systems is down to the available software, as well as the abilities of the 2gs computer that are above and beyond those that are known as Mac.
