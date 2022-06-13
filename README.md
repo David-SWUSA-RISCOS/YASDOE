@@ -6,7 +6,9 @@ PLEASE SEE: [The YASDOE WIKI](https://github.com/David-SWUSA-RISCOS/YASDOE/wiki)
 
 YASDOE (Yet Another Simple Desktop Operating Environment) a Simple 65816, ARM, and 680x0 Operating System.
 
-**UPDATE:** The ARM Version is back.  I like the real ARM ISA too much not to continue that branch.
+**UPDATE:** The RISC OS Hosted version is workable, need to redo some things do to small changes made, though no need to worry about HW support anymore on the ARM target (RISC OS provides that, essentially using RISC OS as a HAL for YASDOE).
+
+**UPDATE:** The ARM Version is back.  I like the real ARM ISA too much not to continue that branch.  Wish I had not moved away from that, just allowed political crud to influence mmy decisions on development for a short time.  The ARM ISA as implemented in the ARMv2, ARMv3, ARMv4 is a great ISA, and still useful into ARMv5 and ARMv6 (so long as you ignore Thumb (Thumb sucks), ignore Jazzle, etc), the core ARM ISA is still and always will be great.  Remember that VFP is a cooprocessor (VFP code is explicitly coprocessor instructions, dispatching to CP10/CP11).
 
 **UPDATE:** A successful boot on a 6502 computer with 256KB bank swiched RAM has been done.  This may help shape the future direction of YASDOE, potentially without the limits of only supporting 65816 and 68K.
 
