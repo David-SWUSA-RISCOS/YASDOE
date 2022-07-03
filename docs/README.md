@@ -1,3 +1,3 @@
-# YASDOE Documentation.
+# YASDOE Documentation:
 
-For online viewable documentation [redirect to the YASDOE Wiki please.](https://github.com/David-SWUSA-RISCOS/YASDOE/wiki)
+**YASDOE** (**Y**et **A**nother **S**imple **D**esktop **O**perating **E**nvironment) is a simple ARM and M68K Operating system that is heavily influenced by RISC OS.
