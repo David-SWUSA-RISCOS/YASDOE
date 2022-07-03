@@ -1,8 +1,8 @@
-[Return to Programming Contents:](./Index)
+[Return to Programming Contents:](./Index.md)
 
 
 ---
-#. The ModuleManager:
+# The ModuleManager:
 
 This is in part just a simple module loader, and in part a bit more.  The module manager provides easy means of dynamic (load time) SWI chunk allocation, thus providing a means to prevent conflicts without relying on any central authority of any kind.
 

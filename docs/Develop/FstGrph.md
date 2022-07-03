@@ -29,7 +29,7 @@ The primary drawing functions are:
 | **FrameOval**  | Draw the outline of an Oval. Implemented as **Plot 68, x, y : Plot x+r1, y : Plot x, y+r2** |
 | **FrameArc**   | Draw an arc.  Custom implmentation, to reduce the calculations that would be needed to use **Plot 160** for this. |
 | **FramePoly**  | Draw a polygon of arbitrary number of sides and shape.  Implementation does one **Plot 68, x, y** for the first point, then uses multiple **Plot 0, x, y** calls one per point,after the final point one more **Plot 0, x, y** call is used to close the polygon.
-| **FrameRgn** Draw the outline of a region.  Custom implementation, as regions are a bit foreign to Plot in concept (have idea to fix that with custom **Plot 240** and **Plot 248** commands, though not done yet).
+| **FrameRgn**   | Draw the outline of a region.  Custom implementation, as regions are a bit foreign to Plot in concept (have idea to fix that with custom **Plot 240** and **Plot 248** commands, though not done yet).
 | **Plot**       | **The primary drawing call**, for which many of the others are just aliases.  The parameters are the same for OS_Plot in RISC OS (so is the SWI call number &45).  Plot may be called either by *SWI &45* or by calling Library &00 function &45. |
 
 When a shape or region is displayed it can be painted, that is filled with a specific color.  This done by simply drawing horizontal lines in each internal span on each scanline.  This is an operation that can be performed very quickly in pure software rendering, and can also be easily accelerated by HW.  It is also possible to use a pattern when performing these operations.
