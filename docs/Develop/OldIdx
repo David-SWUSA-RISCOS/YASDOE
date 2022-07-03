@@ -1,0 +1,133 @@
+The API and ABI of YASDOE is intended to be easy to program for and with.  The core API / ABI is modeled after that of RISC OS, with some inspiration from Amiga OS and elsewhere.  YASDOE will also provide for a simpler calling mechanisms for many things.
+
+* "Binary Format Executables and Modules:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/ProgramFiles
+* "Calling Conventions:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Calling.Convention
+* "CoreDOS:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.CoreDOS
+** "The CoreDOS SWI's:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.CoreDOS#the-swis-and-library-functions
+** "FS Support:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.CoreDOS#filesystem-support
+** "Extending CoreDOS:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.CoreDOS#extending-coredos
+
+* "Core System:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#the-os-level-modules
+** "LibManger:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#libmanager
+** "ListManager:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#listmanager
+** "TaskManager:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#taskmanager
+** "Callbacks:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#callback
+** "VectorManager:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#vectormanager
+** "FakeKernel:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Microkernel#fakekernel
+
+* ModuleManager:
+** About Modules:
+** Library calls:
+** Call Module by SWI:
+** Writing Modules:
+** Service Handlers.
+** SWI Handlers:
+** Applications in Modules:
+** Library Call Handling:
+** CLI Commands:
+
+* "Multitasking Model":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.Multitasking#multitasking-overview
+* TaskManager:
+** Overview:
+** SWIs and Library Calls:
+** Getting Task Information:
+** Sending Quit Message:
+** The WIMP UI:
+** CLI Commands:
+
+* CLIHandler:
+** Handling CLI commands:
+** The SWI:
+
+* Hardware Support:
+
+* DeviceFS:
+
+* Portable
+** PowerManagement:
+** SpeedManagement:
+** Sensors:
+
+* USB (aarg):
+** The Model:
+** Host Controller:
+** Devices:
+** Endpoints:
+** DeviceFS Access:
+
+* "FastGraph Quickly Drawing with Dynamic Clipping:":https://github.com/David-SWUSA-RISCOS/YASDOE/wiki/Develop.FastGraph
+** Basic Drawing Operations:
+** Raster Graphics operations:
+** Region based Clipping:
+
+* OS_Byte:
+
+* OS_Word:
+
+* VDU:
+** Text Streams:
+** Graphics:
+** Simple Clipping:
+** Printing:
+
+
+* Filesystems:
+** How Filesystems are Implemented:
+** Image Filing Systems:
+** YFS:
+** Other FS Tricks:
+
+* The Desktop:
+** What it is:
+** Composed of Multiple Programs:
+** WM Overview:
+** IconBar Overview:
+** PinBoard Overview:
+** TaskManager Overview:
+** DisplayManager Overview:
+** Desktop Filers Overview:
+** Free Overview:
+** Drag and Drop Overview:
+** How it all fits together:
+
+* The Window Manager, core of all UIs on YASDOE:
+** Basic Concepts:
+** The Window Block:
+** Window Templates:
+** The Menu Block:
+** Working With Windows.
+** On the IconBar:
+** Handling Events, more ways than one.
+** Window Manager Service Calls.
+** Clipping:
+** Messages, messages, and messages:
+** Star Commands:
+
+* DragAObject & DragASprite:
+** Overview:
+** How to start:
+** How to finish:
+** SWIs:
+** Star Commands:
+
+
+* IconBar:
+** Overview:
+** Window Management:
+** SWI Calls:
+** Star Commands:
+
+* The Desktop Filer:
+** A desktop Shell:
+** Filer services:
+** Filer Messages:
+** The Filer and Drag and Drop.
+** CLI Commands:
+
+* Sound System, very versatile, very easy to work with:
+** Sound Basics:
+** The Sound Buffers and Mixing:
+** Setting a rate:
+** About getting Sound input, more buffers:
+
+* **TODO**, Finish index, link in documents for each section:
