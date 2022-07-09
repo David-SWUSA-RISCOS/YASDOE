@@ -1,3 +1,5 @@
+The view that is presented here is that of the author of YASDOE, and one that is largely shared by some other Desktop ARM Computer users that the Author knows and speaks with about such things in the South-West United States of America.
+
 # What is ARM, One View:
 
 ARM is the CPU series that uses a 32-bit Instruction word, and implements the Instruction Set of the ARMv2, with some updates.  That is the core CPU, not any of the Coprocessors that are accessed by way of Coprocessor Instructions (like FPE, VFP, NEON, etc), coprocessors are just that, seperate from the CPU processors.
