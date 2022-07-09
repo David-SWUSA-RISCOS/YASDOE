@@ -4,6 +4,18 @@
 THIS PAGE BEING UPDATED
 ***
 
+The two things that got the project now known as YASDOE going back in 2012 were the potential challenge (with a new ARM based computer coming out) and the chance to show that preemptive multitasking can be very effecient (traditionally Cooperative Multitasking has shown more effecient).  By nature there is the inspiration that comes from the Operating Systems that the author has studdied over time.
+
+## The Multitasking Question:
+
+The argument of which is better, cooperative multitasking or Preemptive multitasking will go on forever.  No attempt is made to enter this argument here, as both have there advantages (even when combined with AMP or SMP for multiple CPU Cores).
+
+Part of the goal of YASDOE is to show that Preemptive multitasking can be accomplished with nearly as little Overhead a Cooperative multitasking (though for obvious reasons never completely as little overhead).  We also wish to show the advantages of cooperative multitasking, which are more than most seem to realize (especially now that Preemptive Multitasking is so wide spread).
+
+As such there is YASDOE, then there is SiBDOE.  These two Operating Systems contain a lot of shared code (around 98% shared code, give or take) and provide identical API and ABI with one another.  The only real difference is the multitasking model, with YASDOE being primarily Preemptive and SiBDOE being primarily Cooperative (with the ability to preempt an errant task).  Originally I was going to call both the same name with the difference noted, though decided that the multitasking model is enough to require a difference in naming and distributing.
+
+## From Other Projects:
+
 Herein we will look at the giants from which we may learn, and have had the most direct impact on the development of YASDOE.
 
 Some of the low level inspiration for YASDOE comes from:
