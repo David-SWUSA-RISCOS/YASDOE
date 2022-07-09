@@ -2,11 +2,11 @@ The view that is presented here is that of the author of YASDOE, and one that is
 
 # What is ARM, One View:
 
-ARM is the CPU series that uses a 32-bit Instruction word, and implements the Instruction Set of the ARMv2, with some updates.  That is the core CPU, not any of the Coprocessors that are accessed by way of Coprocessor Instructions (like FPE, VFP, NEON, etc), coprocessors are just that, seperate from the CPU processors.
+ARM is the CPU series that uses a 32-bit Instruction word, and implements the Instruction Set of the ARMv2, with some updates.  That is the core CPU, not any of the Coprocessors that are accessed by way of Coprocessor Instructions (like FPE, VFP, NEON, etc), coprocessors are just that, seperate from the CPU processors (even if they mix logic on die with the CPU, still a coprocessor).
 
 Thumb is **NOT** ARM, Jazzle is **NOT** ARM, etc.
 
-ARM is a simple ISA that has been lost to the company that now maintains the name.  ARM is what we saw with the ARMv2 (first widely available version), ARMv3, and ARMv4 implementations.  It can be argued that ARM is still alive in the ARMv5 and ARMv6 devices, and I agree with this, while these newer ISA's have some things that border on going to far, they are still at there core ARM devices.  ARMv7 is ARM like, though it depracates some instructions, making it not count.
+ARM is a simple ISA that has been lost to the company that now maintains the name.  ARM is what we saw with the ARMv2 (first widely available version), ARMv3, and ARMv4 implementations.  It can be argued that ARM is still alive in the ARMv5 and ARMv6 devices, and the author agrees with this, while these newer ISA's have some things that border on going to far, they are still at there core ARM devices.  ARMv7 is ARM like, though it depracates some instructions, making it not count (there are useful ARMv7 cores, the ones that still have the full 32-bit ARM ISA and still have SWAP).
 
 There are three classes of ARM CPU's.  First are those that have a 24-bit PC and thus a 26 bit effective address range for Instruction acces, with the other bits of R15 being used for the current mode and flags.  Second are those that can operate with the 24-bit PC that uses the other bits for flags and mode, though can also operate with 32-bit PC in R15 with the PSR accessed seperately.  Third are those that can only work with a 32-bit PC that fills R15 and keeps the PSR seperate.  These are the only three groups that count as ARM.
 
