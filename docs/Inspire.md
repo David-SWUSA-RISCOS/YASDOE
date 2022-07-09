@@ -30,7 +30,7 @@ Some of the low level inspiration for YASDOE comes from:
 
 
 ---
-## Atari TOS:
+### Atari TOS:
 
 From Atari TOS we learn that any system can be cloned, or even just partially cloned.  Look at the number of GEMDOS replacements, VDI replacements, AES replacements, Whole TOS Replacements.
 
@@ -41,7 +41,7 @@ Replacement parts of Atari TOS also reinforce the lesson that for desktop comput
 
 
 ---
-## Amiga OS:
+### Amiga OS:
 
 From Amiga OS we learn a lot.  This includes ways to keep things very simple while improving capabilities.
 
@@ -52,7 +52,7 @@ Amiga OS provides the inspiration from BOOPSI, a simple means of OO that can be 
 
 
 ---
-## RISC OS:
+### RISC OS:
 
 This is the Operating System that has likely had the most effect on YASDOE of any of them.  From RISC OS come many ideas including:
 
@@ -70,7 +70,7 @@ Also an inverse argument is taken of RISC OS.  Part of the intent of YASDOE bein
 
 
 ---
-## Ancient Unix:
+### Ancient Unix:
 
 From the very early editions of Unix, though mostly the Unix Philosophy (that has been lost to most modern nix systems).
 
@@ -81,7 +81,7 @@ I truely whish modern systems would remember this philosophy.  Not to mention th
 
 
 ---
-## Zerro-GUI:
+### Zerro-GUI:
 
 Zerro-GUI was the authors first ever homebrew GUI, that was more than 20 years before I started working on YASDOE.  Zerro-GUI was rewritten a few times to experiment with different methods of clipping, managing overlapping windows, cooperative Multitasking, etc.
 
@@ -90,7 +90,7 @@ The contribution that was made from Zerro-GUI is that what was learned from the 
 
 
 ---
-## PlayerKit:
+### PlayerKit:
 
 Player kit is a programmers toolkit for dynamic Sprite type objects (called Player Objects in the kit) that uses inversion point line clipping to mask the sprite images.  This was for the Apple II series and initially released in 1979 as far as I can tell (may be older, though definitely the last version I can find is from late 1979, earliest I can find is from early 1979).
 
@@ -101,7 +101,7 @@ The way that operations on line clipped Objects was a huge inspiration for the R
 
 
 ---
-## Macintosh System Software:
+### Macintosh System Software:
 
 From here we have a few concepts.  The most important being the concept of Regions.
 
