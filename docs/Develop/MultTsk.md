@@ -50,7 +50,7 @@ A preemptive task switch still has all the overhead of a cooperative task switch
 
 NOT TESTED AT THIS TIME (had been tested in the past, do not currently have multi Core system to test on).
 
--The only two differences needed with multiple CPU usage are that each task is allocated to the core that has spent the most time in the Idle queue over the last 120 vblanks. This gives a level of balance when multiple tasks are running with a lot of active time, and can speed up some workloads- .
+~~The only two differences needed with multiple CPU usage are that each task is allocated to the core that has spent the most time in the Idle queue over the last 120 vblanks. This gives a level of balance when multiple tasks are running with a lot of active time, and can speed up some workloads~~.
 
 There are also the consideration of things like callbacks setup by a task that must be catered for with multiple tasks running at the same time on separate CPU's, something that is not as much an issue in cooperative multitasking on one CPU.
 
