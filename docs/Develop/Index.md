@@ -10,4 +10,4 @@
 * [Graphics Library](./FstGrph.md)
 * [Device File Operating System](./CoreDOS.md)
 * [The Window Manager](./WIMP.md)
-* [Active Sprites, Multimedia Made Easy]{./activesprite.md}
+* [Active Sprites, Multimedia Made Easy](./activesprite.md)
