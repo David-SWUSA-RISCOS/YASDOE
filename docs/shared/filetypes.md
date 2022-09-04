@@ -1,5 +1,5 @@
-[Return to Developer Doc Index](../Develop/Index.md)
-[Return to User Doc Index](../user/README.md)
+* [Return to Developer Doc Index](../Develop/Index.md)
+* [Return to User Doc Index](../user/README.md)
 
 # YASDOE File Types
 
