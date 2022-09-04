@@ -33,15 +33,17 @@ A task is moved from the **Time Wait Queue** to the **Active Queue** when its ti
 ---
 ## Task Preemption:
 
-The TaskManager performs a task switch 60 times per second normally (using the vertical retrace interrupt (vblank)).  Task switching is disabled in the case of being in a non-reentrant library or component.
+We used to use the vblank inturrupt.  I recently rewrote the inturrupt handling so this now uses the centasecond timer instead, and defaults to 25 times per second (once every four centaseconds).
 
-If there is a task other than the current task in the active queue when the vblank timer calls the TaskManager a task switch is performed, allowing the other task time to run.
+The TaskManager performs a task switch 25 times per second normally (every fourth centasecond timer inturrupt) by default.  Task switching is disabled in the case of being in a non-reentrant library or component.
+
+If there is a task other than the current task in the active queue when the TaskManager is called by the centasecond timer handler (by default every fourth centasecond)  a task switch is performed, allowing the other task time to run.  This will not happen if a cooperative task switch accured since the last time the TaskManager was called by the Centasecond Timer Inturrupt handler, as cooperative multitasking is still prefered.
 
 Some system calls are able to start a background task to perform there operation, while blocking only the task that expects the call to block.  This is done by calling the library function BackProcess of the TaskManager's library interface, with the call specifying the task handle to block until done.
 
 In the case of the **Active Queue** being empty the TaskManager will run the task with TaskHandle 0, which is never in a queue and is the Idle task.  Where supported by the CPU the idle task uses a wait type instruction to reduce CPU usage (supported on ARMv4 and newer, also on some 68K CPU's).
 
-A preemptive task switch still has all the overhead of a cooperative task switch.  As such there is a call to set longer timeslices than the normal one vblank, to improve performance.  The star command **TaskTimeSlice** passed single nibble parameter is used to configure the number of vblanks per time slice, from 1 through 15, a value of 0 degrades to purely cooperative multitasking.  This may also be done through the Library Call **Task_TimeSlice** as well as the SWI call **Task_TimeSlice**
+A preemptive task switch still has all the overhead of a cooperative task switch.  As such there is a call to set longer timeslices than the normal 4 centaseconds, to improve performance.  The star command **TaskTimeSlice** passed single nibble parameter is used to configure the number of centaseconds times 4 per time slice, from 1 through 15, a value of 0 degrades to purely cooperative multitasking.  This may also be done through the Library Call **Task_TimeSlice** as well as the SWI call **Task_TimeSlice**
 
 
 ---
