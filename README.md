@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/David-SWUSA-RISCOS/YASDOE/raw/main/docs/gifs/logo.gif "YASDOE Logo")
 
-PLEASE SEE: [The YASDOE Documents](./docs/Develop/Index.md) For more information.
+PLEASE SEE: [The YASDOE Documents](./docs/README.md) For more information.
 
 **NOTE:**
 I have been rewriting small parts of YASDOE in a compiled subset of BASIC V as appropriate while documenting the function.
