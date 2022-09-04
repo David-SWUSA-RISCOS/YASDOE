@@ -18,7 +18,7 @@ There are 4 task queues:
 * **Time Wait Queue** : Contains tasks waiting to wake on a specific time, this queue is kept sorted by time remaining, with least time remaining at the head of the list.
 * **Back Wait Queue** : Contains tasks waiting for a background system task that is blocking to that task.
 
-A task may be moved to the **Event Wait Queue** by calling **Task:EventWait**.  If a non-zero time is specified said task is also moved to the **Time Wait Queue**.  A task is also moved to the **Event Wait Queue** when it sends a message, in order for all tasks interested to be able to see the message before it makes it back to the sending task.  There are also some Window Manager calls that can cause a task to go to the **Event Wait queue** such as **WIMP_Poll** and **WIMP_PollIdle** , in the case of the likes of **WIMP_PollIdle** the task is also put into the **Time Wait Queue**
+A task may be moved to the **Event Wait Queue** by calling **Task_EventWait**.  If a non-zero time is specified said task is also moved to the **Time Wait Queue**.  A task is also moved to the **Event Wait Queue** when it sends a message, in order for all tasks interested to be able to see the message before it makes it back to the sending task.  There are also some Window Manager calls that can cause a task to go to the **Event Wait queue** such as **WIMP_Poll** and **WIMP_PollIdle** , in the case of the likes of **WIMP_PollIdle** the task is also put into the **Time Wait Queue**
 
 When a task makes a blocking system call that may take some time it may end up in the **Back Wait Queue** while the call spawns a task of its own to handle the call asynchronously to other tasks.  In some cases part of the time in the **Back Wait Queue** may be to a call having to complete from other tasks before handling the request of the most recent caller (so there can be multiple levels of blocking).
 
@@ -41,7 +41,7 @@ Some system calls are able to start a background task to perform there operation
 
 In the case of the **Active Queue** being empty the TaskManager will run the task with TaskHandle 0, which is never in a queue and is the Idle task.  Where supported by the CPU the idle task uses a wait type instruction to reduce CPU usage (supported on ARMv4 and newer, also on some 68K CPU's).
 
-A preemptive task switch still has all the overhead of a cooperative task switch.  As such there is a call to set longer timeslices than the normal one vblank, to improve performance.  The star call **TaskTimeSlice** passed single nibble parameter is used to configure the number of vblanks per time slice, from 1 through 15, a value of 0 degrades to purely cooperative multitasking.
+A preemptive task switch still has all the overhead of a cooperative task switch.  As such there is a call to set longer timeslices than the normal one vblank, to improve performance.  The star command **TaskTimeSlice** passed single nibble parameter is used to configure the number of vblanks per time slice, from 1 through 15, a value of 0 degrades to purely cooperative multitasking.  This may also be done through the Library Call **Task_TimeSlice** as well as the SWI call **Task_TimeSlice**
 
 
 ---
