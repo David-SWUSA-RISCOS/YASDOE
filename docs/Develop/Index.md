@@ -9,5 +9,6 @@
 * [The Module Manager](./ModMan.md)
 * [Graphics Library](./FstGrph.md)
 * [Device File Operating System](./CoreDOS.md)
+* [FileTypes](../shared/filetypes.md)
 * [The Window Manager](./WIMP.md)
 * [Active Sprites, Multimedia Made Easy](./activesprite.md)
