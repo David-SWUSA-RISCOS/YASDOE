@@ -10,7 +10,7 @@ YASDOE allows for a maximum of 256 total tasks, including 4 that are always allo
 ---
 ## Task Scheduling:
 
-Task scheduling is very simple in YASDOE, using the nature of cooperative multitasking in a preemptive multitasking system.  If more than one task is currently in the active queue (more rare than you likely think) then the TaskManager performs normal preemptive switching 60 times per second in round robin fashion on the active queue, otherwise the current task is kept in.
+Task scheduling is very simple in YASDOE, using the nature of cooperative multitasking in a preemptive multitasking system.  If more than one task is currently in the active queue (more rare than you likely think) then the TaskManager performs normal preemptive switching 25 times per second in round robin fashion on the active queue, otherwise the current task is kept in.
 
 There are 4 task queues:
 * **Active Queue** : Contains tasks currently active.
@@ -50,13 +50,9 @@ A preemptive task switch still has all the overhead of a cooperative task switch
 
 ## Multiple CPU Cores:
 
-NOT TESTED AT THIS TIME (had been tested in the past, do not currently have multi Core system to test on).
+While there had been implementation of Multiple CPU/Core support in some early development versions of YASDOE, it has been decided not to maintain this until such time as a good ARMv3 Multiple CPU system comes widely available, with correct use of the SWP instruction and the external line to keep bus master atomic operation in the SWP instruction (as detailed in the TRM for the ARMv2a, ARMv3, and ARMv4 CPU's).  Even a multiple CPU ARMv5 or ARMv6 system would work if it correctly implements the SWP instruction and external HW to maintain true atomic operation of the SWP instruction.
 
-~~The only two differences needed with multiple CPU usage are that each task is allocated to the core that has spent the most time in the Idle queue over the last 120 vblanks. This gives a level of balance when multiple tasks are running with a lot of active time, and can speed up some workloads~~.
-
-There are also the consideration of things like callbacks setup by a task that must be catered for with multiple tasks running at the same time on separate CPU's, something that is not as much an issue in cooperative multitasking on one CPU.
-
-
+The most important things in keeping with ARM is keeping the [true ARM ISA](../WhatIsARM.md) and keeping the transistor count of the CPU (excluding cache) under 128000 total, which is quite doable with even a correct ARMv6 implementation.
 
 ---
 ## Starting a New Task:
