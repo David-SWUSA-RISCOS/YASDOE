@@ -12,4 +12,6 @@ There are three classes of ARM CPU's.  First are those that have a 24-bit PC and
 
 Any of the other stuff that ARM Ltd. has come up with is **NOT ARM**.  That is to say that Tuumb, Thumb2, TumbEE, Jazzle, AARCH64, etc are **NOT ARM** .  Some of these are CISC like preprocessing devices that process a different ISA into the core ISA, some are just useless, and some are a different ISA altogether.  When you create a new incompatible ISA you create a new CPU with a new name so the ISA is known, at least this is how everyone else does it, ARM Ltd. should learn from the rest of the world on that one.
 
-So I like ARM, true ARM that is.  I do not like the other ISA based CPU's that wrongly have the name of ARM put on them, they are not ARM.
+If the author understands correctly Thumb was requested by another company originally, under the thought of increasing code density.  Considering that the other company in question was using M680x0 series CPU's before ARM, and later added PowerPC CPU's it makes little sense, as ARM was very close in code density in most cases to the M680x0 (sometimes greater code density than the 680x0 series), and almost always higher code density than the PowerPC.
+
+So the author likes ARM, true ARM that is.  The author does **not** like the other ISA based CPU's that wrongly have the name of ARM put on them, they are not ARM.
