@@ -20,6 +20,8 @@ Large file operations are only blocking to the task that calls for them, other t
 
 FileSystems are separate from the core.  The primary FileSystems that are included by default with YASDOE are FFS, ADFS, YFS, and DeviceFS.  The first three of these are standard storage device FileSystems with the last being what it's name implies.
 
+In the RISC OS hosted version of YASDOE, which is the primary version, the boot YFS file system is in a volume image (disk image if you will) file.
+
 
 
 ---
