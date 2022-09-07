@@ -4,7 +4,7 @@ At the CLI volumes are usually refered to by there volume letter assignment, tho
 
 Each drive has a **CWD** (Current Working Directory) which is the working directory for commands in that drive.
 
-File and directory names may be up to 32-characters long, and can not contain any of the characters inside the following braces { " : \ / , * ? | > < ! } though may contain spaces, and may contain braces.  Any valid typable ASCII character is allowed in filenames, and language may be selected on a per file bases for extended ASCII interpretation (though extended graphics characters are lost for some languages).
+File and directory names may be up to 32-characters long, and can not contain any of the characters inside the following braces { " : \ / , * ? | > < ! } though may contain spaces.  Any valid typable PETSCII character is allowed in filenames, and language may be selected on a per file bases for extended character interpretation (though extended graphics characters are lost for some languages).
 
 Any command line entered must be less than 511 characters in length.
 
