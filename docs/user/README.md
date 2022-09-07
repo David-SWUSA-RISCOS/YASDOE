@@ -6,6 +6,7 @@ While YASDOE is largely inspired by RISC OS, with some inspiration from ProDOS a
 
 
 * [FileTypes](../shared/filetypes.md)
+* [COMMAND.PRG and the CLI](./cli.md)
 * TODO: Convert more User Documentation.
 
 
