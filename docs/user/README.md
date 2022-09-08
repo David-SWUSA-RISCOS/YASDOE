@@ -12,4 +12,6 @@ While YASDOE is largely inspired by RISC OS, with some inspiration from ProDOS a
 
 ## THANK YOU:
 
-I noticed that the download count of the YASDOE binaries and Documentation is over 400 downloads on the main file site for YASDOE.  So thank you to everyone that is giving YASDOE a try.
+<s>I noticed that the download count of the YASDOE binaries and Documentation is over 400 downloads on the main file site for YASDOE</s>.  Thank you to everyone that is giving YASDOE a try.
+
+Now two days after posting the files we are well over 500 downloads of the binaries, as well as nearly 700 of the source archive and documentation archive.  Thank you all for all that are using or modifiying YASDOE.  Have fun with it, I hope someone does something useful with this OS.
